@@ -62,24 +62,33 @@ hr#mark {
 .sender[type=normal][colornumber='10'] { color: #f84; }
 .sender[type=normal][colornumber='11'] { color: #f08; }
 .sender[type=normal][colornumber='12'] { color: #44f; }
-.sender[type=normal][colornumber='13'] { color: #f80; }
+.sender[type=normal][colornumber='13'] { color: #FF6600; }
 .sender[type=normal][colornumber='14'] { color: #08f; }
-.sender[type=normal][colornumber='15'] {} /* DecafBland only specified 15 colors */
+.sender[type=normal][colornumber='15'] { color: #FF0000; }
+.sender[type=normal][colornumber='16'] { color: #FFF700; }
+.sender[type=normal][colornumber='17'] { color: #6B8E23; }
+.sender[type=normal][colornumber='18'] { color: #00FF00; }
+.sender[type=normal][colornumber='19'] { color: #00FFFF; }
+.sender[type=normal][colornumber='20'] { color: #007BA7; }
+.sender[type=normal][colornumber='21'] { color: #4B0082; }
+.sender[type=normal][colornumber='22'] { color: #00A86B; }
+.sender[type=normal][colornumber='23'] { color: #964B00; }
+.sender[type=normal][colornumber='24'] { } /* DecafBland-dasl only specified 25 colors */
 
 body.normal .sender, body.normal .place {
   display: block;
-  width: 15ex;
+  width: 12ex;
   float: left;
   text-align: right;
 }
 
 .line[type=privmsg] .sender:before {
-  content: "<";
+  content: "";
   white-space: nowrap;
 }
 
 .line[type=privmsg] .sender:after {
-  content: ">";
+  content: "";
   white-space: nowrap;
 }
 
@@ -106,7 +115,7 @@ body.console .sender {
 body.normal .message {
   display: block;
   text-align: left;
-  margin-left: 16ex;
+  margin-left: 13ex;
   margin-right: 9ex;
   word-wrap: break-word;
   -khtml-line-break: after-white-space;
@@ -132,10 +141,18 @@ body.normal .event .message[type=reply], body.normal .event .message[type=topic]
     color: #01880D;
 }
 
-body.normal .event .time {
-    display: none;
+div[type=topic] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 0 !important;
+    padding-top:5px;
+    padding-bottom:5px;
+    background: #F9FCE6;
+    width: 100%;
+    border-bottom:1px dashed #a8a8a8;
 }
 
-body.normal .event:hover .time {
+body.normal .event .time {
     display: inline;
 }
